@@ -1,0 +1,40 @@
+{
+  "name": "planetjs",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A server controller for Trackmania",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "eslint src/.",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GreepTheSheep/planet.js.git"
+  },
+  "keywords": [
+    "ManiaPlanet",
+    "Trackmania",
+    "gbx",
+    "remote",
+    "controller",
+    "server"
+  ],
+  "author": "Greep",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GreepTheSheep/planet.js/issues"
+  },
+  "homepage": "https://github.com/GreepTheSheep/planet.js#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "download": "^8.0.0",
+    "fs": "^0.0.1-security",
+    "gbxremote": "^0.2.1",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.24.0"
+  }
+}
