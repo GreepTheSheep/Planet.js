@@ -5,10 +5,12 @@
 Trackmania servers can have a controller, that means it can display server informations and can control a server in input/output, with the XMLRPC protocol on the server-side
 
 ## Installation
-1) Download (Node.js)[https://nodejs.org/]
+1) Download [Node.js](https://nodejs.org/) and MySQL (with Wamp, Xampp, or any else)
 2) Download the repo
 3) Rename settings.sample.json to settings.json and fill/replace the details on it
-4) Launch the server, once launched run the controller with `node .` on the cmd
+4) Insert the SQL file to the database to register the tables
+5) Install dependencies with `npm i`
+6) Launch the server, once launched run the controller with `node .` on the cmd
 
 For hosted servers (like VPS), you can run it on PM2 daemon with the command `pm2 start src/index.js -n "TM Control JS"`
 
