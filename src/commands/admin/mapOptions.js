@@ -6,6 +6,8 @@ module.exports = async function(message, gbxClient){
     }
     if (message.content.startsWith('//skip')){
         await gbxClient.query('ChatSendServerMessage', ["$f0f $0ff"+player.NickName+" $zskipped the current map"])
+        var nextMap = await gbxClient.query('GetNextMapInfo')
+        await gbxClient.query('ChatSendServerMessage', ["$f0f $zThe next map will be "+nextMap.Name])
         await gbxClient.query('NextMap')
     }
 }
