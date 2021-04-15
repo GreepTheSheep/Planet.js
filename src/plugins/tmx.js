@@ -1,7 +1,9 @@
 const download = require('download')
 const fs = require('fs')
+const path = require('path')
 const colors = require('colors')
-module.exports = async function(gbxClient, sql){
+const xml2js = require('xml2js')
+module.exports = async function(gbxClient, sql, settings){
     gbxClient.on('TrackMania.PlayerChat', async params=>{
         const message = {
             serverMessage: params[0] == 0 ? true: false,
@@ -34,6 +36,15 @@ module.exports = async function(gbxClient, sql){
                             await download('https://trackmania.exchange/maps/download/'+args[1], tmxDir, {filename: filename});
                             let map = await gbxClient.query('GetMapInfo', [tmxDir + filename])
                             map['tmxId'] = args[1];
+
+                            var matchSettings = await xml2js.parseStringPromise(fs.readFileSync(path.join(mapsDir, 'MatchSettings', settings.trackmania.matchsettings_file)))
+                            var actualMap = await gbxClient.query('GetCurrentMapInfo')
+                            actualMap['index'] = await gbxClient.query('GetCurrentMapIndex');
+                            matchSettings.playlist.map.splice(actualMap.index+1,0, { file: [ "TMX/"+filename ] } )
+                            
+                            var builder = new xml2js.Builder();
+                            fs.writeFileSync(path.join(mapsDir, 'MatchSettings', settings.trackmania.matchsettings_file), builder.buildObject(matchSettings))
+
                             await gbxClient.query('InsertMap', [tmxDir + filename]);
                             let player = await gbxClient.query('GetPlayerInfo', [message.player.login, 1])
                             await gbxClient.query('ChatSendServerMessage', [`$0fa $z${player.NickName} added ${map.Name} $zfrom $l[https://trackmania.exchange/s/tr/${map.tmxId}]Trackmania.Exchange$l`])

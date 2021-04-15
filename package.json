@@ -32,7 +32,8 @@
     "fs": "^0.0.1-security",
     "gbxremote": "^0.2.1",
     "mysql": "^2.18.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "eslint": "^7.24.0"
