@@ -1,5 +1,5 @@
 {
-  "name": "planetjs",
+  "name": "tmcontroljs",
   "version": "0.0.1",
   "private": true,
   "description": "A server controller for Trackmania",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GreepTheSheep/planet.js.git"
+    "url": "git+https://github.com/GreepTheSheep/tmcontroljs.git"
   },
   "keywords": [
     "ManiaPlanet",
@@ -23,9 +23,9 @@
   "author": "Greep",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GreepTheSheep/planet.js/issues"
+    "url": "https://github.com/GreepTheSheep/tmcontroljs/issues"
   },
-  "homepage": "https://github.com/GreepTheSheep/planet.js#readme",
+  "homepage": "https://github.com/GreepTheSheep/tmcontroljs#readme",
   "dependencies": {
     "colors": "^1.4.0",
     "download": "^8.0.0",

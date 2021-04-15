@@ -1,0 +1,47 @@
+{
+    "trackmania": {
+        "host": "localhost",
+        "port": 5000,
+        "login": "SuperAdmin",
+        "password": "SuperAdmin",
+
+        "matchsettings_file": "tracklist.txt"
+    },
+
+    "database": {
+        "host": "localhost",
+        "database": "tmcontroljs",
+        "user": "root",
+        "password": ""
+    },
+
+    "owner": "your-login",
+
+    "admins": [
+        "a-login",
+        "b-login"
+    ],
+
+    "moderators": [
+        "c-login",
+        "d-login"
+    ],
+
+    "unloadPlugins": [
+        "test.js"
+    ],
+
+    "unloadCommands": {
+        "everyone": [
+
+        ],
+        "moderators": [
+
+        ],
+        "admins": [
+
+        ]
+    },
+
+    "devMode": true
+}

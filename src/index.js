@@ -45,7 +45,7 @@ gbxClient.on('connect', async ()=>{
         console.error('Error when querying server:', err);
     });
 
-    await gbxClient.query('ChatSendServerMessage', [`$0fa$w $0FAP$4BBl$88Da$B4En$F0Fe$F0Ft$E0B.$D07j$C03s$z, v${pkg.version}.\n$f0f $z${plugins.length} loaded`])
+    await gbxClient.query('ChatSendServerMessage', [`$0fa$w $390T$582M$785C$877o$A7An$C6Ct$C6Cr$D89o$E96l$EB3J$FC0S$z, v${pkg.version}.\n$f0f $z${plugins.length} loaded`])
 });
 
 gbxClient.on('callback', function(method, params) {

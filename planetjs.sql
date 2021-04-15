@@ -1,6 +1,0 @@
-CREATE DATABASE IF NOT EXISTS `planetjs`;
-
-USE `planetjs`;
-
-CREATE TABLE IF NOT EXISTS `planetjs`.`players` ( `id` INT NOT NULL AUTO_INCREMENT , `login` VARCHAR(100) NOT NULL , `nickname` VARCHAR(100) NOT NULL , `perms` INT NOT NULL DEFAULT '0' , PRIMARY KEY (`id`));
-
